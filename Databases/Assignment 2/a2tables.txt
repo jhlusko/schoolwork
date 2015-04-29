@@ -1,0 +1,59 @@
+-- The Query1 table contains the player(s) which have the best ratio of value-to-goals.
+CREATE TABLE Query1 (
+	fname [VARCHAR(20)], 
+	lname [VARCHAR(20)], 
+	country [VARCHAR(20)]);
+
+-- The Query 2 table contains top-3 names of the football clubs that have the most players participating into World Cup 2014.
+CREATE TABLE Query2 (
+	name [VARCHAR(20],
+	num [INTEGER]);
+
+-- THE Query3 table contains a boolean corresponding to if Brazil played the first match.
+CREATE TABLE Query3 (
+	IsOpeningGame [BOOLEAN]);
+
+-- The IsOpeningBrazilian view contains the mid of the opening game iff Brazil played.
+CREATE VIEW IsOpeningBrazilian AS
+SELECT match.mid
+FROM match, country, competes
+WHERE date <= ALL (SELECT date FROM match) AND
+Time <= ALL (SELECT time FROM match) AND
+match.mid = competes.mid AND
+(competes.country1 = (
+SELECT DISTINCT cid
+FROM country
+WHERE name = “Brazil”)
+OR
+competes.country1 = (
+SELECT DISTINCT cid
+FROM country
+WHERE name = “Brazil”));
+
+-- The Query4 table contains the matches for which at least two tickets were bought on the date of the match. 
+CREATE TABLE Query4 (
+	mid [INTEGER]);
+
+
+-- The Query5 table contains the national team(s) that has played matches in all the stadiums of World Cup 2014. 
+CREATE TABLE Query5 (
+	name [VARCHAR(20)]);
+
+-- The Query6 table contains the football player(s) that played in all the matches of their national team whose participation time was more than 75 minutes on average. 
+CREATE TABLE Query6(
+	fname [VARCHAR(20)], 
+	lname [VARCHAR(20)], 
+	minutes [NUMERIC]);
+
+-- The TopPlayer view contains the top scoring player(s).
+CREATE VIEW TopPlayer AS
+SELECT pid
+FROM player
+WHERE goals >= ALL (SELECT goals FROM player);
+
+
+-- The Query7 table contains the team(s) that have the lowest budget and happen to have a top scoring player.
+CREATE TABLE Query7 (
+	name [VARCHAR(20)], 
+	coach [VARCHAR(20)], 
+	budget [INTEGER]);

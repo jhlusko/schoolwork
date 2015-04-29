@@ -1,0 +1,11 @@
+Java Automatic Marker 0.1.0
+
+All tests passed!
+
+********************************************************************************
+*                        SUMMARY @ 2013/11/15 10:04:44                         *
+********************************************************************************
+    Tests passed: 12
+    Tests run: 12
+    Note: Each test may be weighted differently, so passing 5 tests of 10 does 
+    not guarantee a mark of 50%.

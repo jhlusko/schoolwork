@@ -1,0 +1,4 @@
+Extensions:
+Ability to choose the dimensions of the tree_map display.
+Ability to toggle display of file path/file size by left click.
+Note: These extensions do not interfere with the baseline, if it doesn't detect mouse movement (like if your mouse is initially off of the window) then the path will be displayed at the bottom of the screen as required.

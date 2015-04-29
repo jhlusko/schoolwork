@@ -1,0 +1,63 @@
+Group T5101-09 Meeting minutes
+
+===============================================================================================
+
+2013/10/23 Plannig Meeting during Tutorial
+
+The game plan: g2franco is going to darft a merged version of both sub-groups CRC models and upload it by 4:30 pm
+on 2013/10/31.
+Meet at University College, front entrance at 5:00 pm to revise the draft.
+
+===============================================================================================
+
+2013/10/31 Planning Meeting at University College Basement. Meeting started at 5:10 pm
+Current Status of project:
+Group revised draft of merged CRC cards and commited after meeting.
+No coding has taken place. CRC cards are unofficially commited as a word document in separate forlder.
+
+Tasks until next planning meeting:
+1. Nurse class and Patient Class (c3hlusko)
+2. EmergecyRoom class (this handles all the saving/loading) (g2franco)
+3. Report class and Vitals class (c2borzic)
+4. Android GUI (c2bevacq)
+
+This tasks should be at or near completion by next meeting. 
+Ask for help if stuck. Offer help if done with your part.
+
+Next meeting (status meeting): Monday November 4th at 5:30 pm at front entrance of University College.
+
+===============================================================================================
+
+2013/11/04 Planning Meeting at University College Basement. Meeting started at 5:40 pm
+Current Status of project:
+
+The following files had been commited prior to starting this meeting:
+src/triage:
+EmergencyRoom.java
+Nurse.java
+Patient.java
+PatientNotFoundException.java
+Report.java
+Vitals.java
+
+src/com/example/androidUI:
+FindPatinetRecordActivity.java
+HomePageActivity.java
+LoginActivity.java
+PatientDataActivity.java
+RecordPatientActivity.java
+RecordVitalsActivity.java
+
+During the meeting we joined all the code in a single machine and made sure all the method calls compiled. Each person will test their own code.
+
+Next Meeting (Status meeting): Wednesday at 5:10 at BA3185
+
+===============================================================================================
+2013/11/06 Planning Meeting at University College Basement. Meeting started at 5:40 pm
+Current Status of project:
+
+
+Met during tutorial and after class. Worked out all the bugs, re commited all the files.
+Commited all the back-and and the Android UI files.
+
+

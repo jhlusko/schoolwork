@@ -1,0 +1,21 @@
+Java Automatic Marker 0.1.0
+
+********************************************************************************
+*                           Tests results for TestMain                         *
+********************************************************************************
+Test case for the presence of any output failed because of a 
+NoClassDefFoundError.
+    Why do I have a NoClassDefFoundError?
+        One of the files in your submission coult not be compiled or were 
+        located in the wrong package. Some tests were not run as a result.
+    Details:
+        Unable to find class e1soln.E1.
+
+
+********************************************************************************
+*                        SUMMARY @ 2013/09/28 15:41:03                         *
+********************************************************************************
+    Tests passed: 0
+    Tests run: 1
+    Note: Each test may be weighted differently, so passing 5 tests of 10 does 
+    not guarantee a mark of 50%.

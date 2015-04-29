@@ -1,0 +1,41 @@
+INSERT INTO Query1 (SELECT player.fname, player.lname, country
+FROM player, country
+WHERE player.cid = country.cid AND
+value/ goals >= ALL (SELECT value/goals FROM player));
+
+INSERT INTO Query2 (SELECT name, count(*) as num
+FROM player, club
+WHERE player.fcid = club.fcid
+GROUP BY fcid
+ORDER BY num DESC, name ASC
+LIMIT 3);
+
+INSERT INTO Query3 (VALUES (EXISTS IsOpeningBrazilian.*));
+
+INSERT INTO Query4 (SELECT mid
+FROM ticket JOIN match ON dateIssued = date AND ticket.mid = match.mid
+GROUP BY mid
+HAVING count(*) > 1
+ORDER BY * DESC);
+
+INSERT INTO Query5 (SELECT name
+FROM stadium, match, competes, country, club
+WHERE stadium.sid = match.sid AND 
+match.mid = competes.mid AND
+(competes.country1 = country.cid OR competes.country2 = country.cid) AND
+country.coach = club.coach
+GROUP BY fcid
+HAVING (SELECT sid FROM stadium) = sid);
+
+INSERT INTO Query6 (SELECT pid, fname, lname, avg(minutes) as minutes
+FROM appearance JOIN player ON player.pid = appearance.pid
+GROUP BY pid
+HAVING  (SELECT mid FROM matches) = mid
+ORDER BY minutes DESC);
+
+INSERT INTO Query7 ( (SELECT name, coach, sum(value) as budget
+FROM club JOIN player ON club.fcid = player.fcid
+GROUP BY fcid
+HAVING budget <= (SELECT name, coach, sum(value) as budget
+FROM club JOIN player ON club.fcid = player.fcid
+GROUP BY fcid)) AND ANY (player.id) = ANY (TopPlayer));

@@ -1,0 +1,13 @@
+Minor Enhancements:
+
+Ability for players to choose their own names.
+A board with labeled axis.
+Announcement when ships are sunk.
+
+
+Major Enhancement:
+
+Ability for players to choose the placement of their ships.
+
+Note about testing:
+Tests are strangely separated into different files because if they are put into the same file the global variable player_lists either grows with each subsequent testcase, or if torn down refuses to be re-added to. I posted about this problem on Piazza (http://piazza.com/class#winter2012/csc148h/444). Separating the files allows each of my testcases to work, and not interfere with each other.

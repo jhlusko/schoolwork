@@ -1,0 +1,33 @@
+Group T5101-09 Meeting minutes Phase III
+
+===============================================================================================
+
+2013/11/15 Planning Meeting at University College Basement. Meeting started at 5:40 pm
+The group analized the changes required for completion of Phase III.
+
+Tasks until next planning meeting:
+1. Make superclass Staff and children classes Nurse and Doctor. Add new features in Doctor class(c3hlusko)
+2. Expand EmergecyRoom class to implement new features (this handles all the saving/loading) (g2franco)
+3. Expand Report class to implement new features (c2borzic)
+4. Expand Android GUI to implement new features (c2bevacq)
+5. Modify back end CRC cards (g2franco to propose draft, all to review)
+6. Create CRC cards for Android GUI classes/activities (g2franco to propose draft, c2bevacq to review)
+
+This tasks should be at or near completion by next meeting. 
+Ask for help if stuck. Offer help if done with your part
+
+Next meeting (status meeting): Monday November 18th at 6:00 pm at front entrance of University College.
+
+===============================================================================================
+
+2013/11/18 Status Meeting at University College Basement. Meeting started at 6:10 pm
+Tasks that are complete:
+1. Staff supperclass and Nurse and Doctor sub-classes
+2. EmergencyRoom implemented new features, testing still pending
+3. Report class implemented new features
+4. Android UI is 70% done
+5. CRC cards were committed in .docx format for the group to review.
+6. CRC cards for Android UI were committed in .docx format for the group to review.
+
+Next meeting (status meeting): Wenedsday November 20th at 8:00 pm after lecture.
+ 

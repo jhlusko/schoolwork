@@ -1,0 +1,44 @@
+Data structure descriptions:
+
+Nurse class:
+Nurse objects store a log-in ID string.
+
+Patient List class:
+Patient list is a list of Patient objects stored in two different Map<object, Patient>:
+patients, a Map<String, Patient> that contains all patients at that ER, with Health Card Numbers as 
+keys to retrieve patient records.
+doctorQueueByArrival Map<Time, Patient> that contains patients not yet seen by a doctor, with
+admission Date as keys to retrieve patient records.
+
+Patient class:
+Patient objects store name and health card number as Strings and the patient's date of birth as 
+a Date object, hospital arrival time is stored as a Date object (number of millisecs since January 1, 1970).
+Patient objects store doctor visits, as a list of Date objects, one for each time the patient was seen 
+by a doctor.
+Patient keeps track of whether the patient needs to see a doctor, stored as a Boolean.
+Patient keeps a Map<Date, Vitals>, storing the vital signs, with the associated timeTaken as key for
+retrieving/storing/sorting.
+Patient stores symptom descriptions as a Map<Date, String>.
+
+Vitals class:
+Each Vitals object stores temperature, systolic blood pressure, diastolic blood pressure and heart rate 
+stored as ints.
+
+
+File system description
+The patient list is stored in a single text file. Each line stores a Patient Object. 
+Patients are re-created as file is read. Each member variable of each Patient object is separated by a 
+special character and within member variables, further delineation is made by different special characters, as follows:
+Patient member variables are stored in the following order, separated by @: 
+name @ date of birth (in MM/dd/yyyy format) @ Health Card Number @ 
+arrival time (in MM/dd/yyyy HH:mm:ss format) @ doctorVisits @ vitals @ symptoms
+
+For doctorVisits List<Date>, the times of different doctor visits are stored in the default List string 
+representation
+For vitals Map<Date, Vitals>, the Date/Vitals pairs are separated by $ and Date is separated from Vitals 
+by ^ and is stored in MM/dd/yyyy HH:mm:ss format
+Within Vitals objects, the 4 member variables are separated by % (i.e. temperature % SystolicBP % 
+DiastolicBP % HeartRate)
+For symptoms Map<Date, String>, the Date/String pairs are separated by $ and Date is separated from 
+String by ^ and is stored in MM/dd/yyyy HH:mm:ss format
+
